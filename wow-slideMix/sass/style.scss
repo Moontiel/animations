@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: peru;
+    color: #fff;
+    height: 80px;
+}
+
+/*
+    section_name: definimos un espaciado para separar esta
+    sección de otras secciones
+*/
+.section_name {
+    padding: 50px 0;
+
+    /*
+        container_name
+    */
+    .container_name {
+        /*
+            flexbox_name
+        */
+        .flexbox_name {
+            /*
+                content_name: definimos un max-width para que
+                este sea el ancho mínimo de este elemento, 
+                finalmente una animación
+            */
+            .content_name {
+                background-color: #d87093;
+                max-width: 300px;
+                height: 400px;
+                margin: 0 auto;
+                padding: 12px;
+                animation: slideLeft 2s;
+
+				/*
+					.slideLeft: al inicio desvanecemos el elemento y lo 
+					.desplazamos -2000px hacia la izquierda, al final lo 
+					.desplazamos hasta su posición original
+				*/ 
+				@keyframes slideLeft {
+					0% {
+						opacity: 0;
+						transform: translateX(-2000px);
+					}
+					100% {
+						transform: translateX(0);
+					}
+				}
+
+                /*
+                    tag-h3: definimos una animación
+                */ 
+                h3 {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 3rem;
+                    margin-bottom: 30px;
+                    animation: slideTop 2s;
+                    animation-delay: 1.8s;
+
+                    /*
+                        .slideTop: al inicio desvanecemos el elemento y lo 
+                        .desplazamos -120px hacia arriba, al final lo 
+                        .desplazamos hasta su posición original
+                    */
+                    @keyframes slideTop {
+                        0% {
+                            opacity: 0;
+                            transform: translateY(-120px);
+                        }
+
+                        30% {
+                            transform: translateY(30px);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            transform: translateY(-20px);
+                        }
+                        
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+
+                /*
+                    tag-p: definimos una animación
+                */
+                p {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.5rem;
+                    animation: slideBottom 2s;
+                    animation-delay: 1.8s;
+
+                    /*
+                        .slideBottom: al inicio desvanecemos el elemento y lo 
+                        .desplazamos 120px hacia abajo, al final lo 
+                        .desplazamos hasta su posición original
+                    */
+                    @keyframes slideBottom {
+                        0% {
+                            opacity: 0;
+                            transform: translateY(120px);
+                        }
+
+                        30% {
+                            transform: translateY(-30px);
+                        }
+                        
+                        60% {
+                            opacity: 1;
+                            transform: translateY(20px);
+                        }
+                        
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

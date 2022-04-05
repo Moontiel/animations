@@ -1,0 +1,90 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header, footer {
+  background-color: seagreen;
+  color: #fff;
+  height: 80px;
+}
+
+/*
+    section_name: definimos un espaciado para separar esta
+    sección de otras secciones
+*/
+.section_name {
+  padding: 50px 0;
+  /*
+      container_name
+  */
+}
+.section_name .container_name {
+  /*
+      flexbox_name
+  */
+}
+.section_name .container_name .flexbox_name {
+  /*
+      content_name: definimos un max-width para que
+      este sea el ancho mínimo de este elemento, 
+      finalmente una animación
+  */
+}
+.section_name .container_name .flexbox_name .content_name {
+  background-color: #f5f546;
+  max-width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  -webkit-animation: slideBottom 2s linear;
+          animation: slideBottom 2s linear;
+  /*
+      .slideBottom: al inicio desvanecemos el elemento y lo 
+      .desplazamos 120px hacia abajo, al final lo 
+      .desplazamos hasta su posición original
+  */
+  /*
+      tag-h3
+  */
+}
+@-webkit-keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.section_name .container_name .flexbox_name .content_name h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */
